@@ -5,12 +5,15 @@
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
+  margin: 10px 0;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 1s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
