@@ -1,8 +1,11 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 const Tasks = () => {
   return (
-    <div>Tasks</div>
+    <Container className="app__flexCenter" fluid>
+      Tasks
+    </Container>
   )
 }
 

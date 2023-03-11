@@ -6,13 +6,11 @@ body {
   --link-color: #61dafb;
   --button-color: #61dafb;
   --pink: rgb(252, 214, 225);
-
-  --container-width: 90vw;
 }
 
 #root{
   font-size: calc(10px + 1vmin);
-  background-color: white;
+  background-color: beige;
   min-height: 100vh;
   @media screen and (max-width: 768px) {
     font-size: calc(8px + 1vmin);

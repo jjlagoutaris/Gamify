@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.scss";
-// import { images } from "./constants";
-// import { Container } from "react-bootstrap";
-import { Footer } from "./components";
-import { TaskCategory } from "./containers";
+import { Footer, Header } from "./components";
+import Main from "./Main/Main";
 
 function App() {
   return (
     <>
-      <TaskCategory />
+      <Header />
+      <Main />
       <Footer />
     </>
   );
