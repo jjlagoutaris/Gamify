@@ -1,0 +1,9 @@
+PART I: MERN 2DO
+
+[1] General: Create a ToDo App that allows the user to create tasks, update tasks, read tasks, and delete tasks and do the same with categories of tasks. Have a backend for this app.
+
+[2] Set up SPA routing based on task category names. 
+
+PART II: Gamify
+
+[3] Extend App to include cookie-clicker-esque progression and store involving an experience system and character progression.

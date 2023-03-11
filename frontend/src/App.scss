@@ -1,18 +1,52 @@
 @import "~bootstrap/scss/bootstrap";
 
-.App {
-  text-align: center;
-  font-size: 36px;
-}
+// General Styling
 
-.app__hi{
+.app__flexCenter, .app__flexColumn{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 
-.App-logo {
+.app__flexColumn{
+  flex-direction: column;
+}
+
+// Text Styling
+
+.app__normal-text{
+  font-family: 'Poppins', sans-serif;
+}
+
+.app__header-text{
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: calc(20px + 3vmin);
+}
+
+// Button Styling
+
+.app__button{
+  background-color: var(--button-color);
+  color: black;
+  border-color: black;
+  &:hover{
+    background-color: var(--pink);
+    border-color: black;
+    color: black;
+  }
+}
+
+
+
+
+
+
+
+
+// COOKIE STYLING & ANIMATION
+
+.app__logo {
   height: 40vmin;
   margin: 10px 0;
   &:hover{
@@ -21,27 +55,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 5s linear;
+  .app__logo {
+    animation: app__logo-spin infinite 5s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes app__logo-spin {
   from {
     transform: rotate(0deg);
   }

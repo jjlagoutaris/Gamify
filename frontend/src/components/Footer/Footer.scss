@@ -1,0 +1,17 @@
+.app__footer{
+  background-color: black;
+  color: white;
+  line-height: .8rem;
+  width: var(--container-width);
+  > .app__footer-top{
+    padding-top: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    line-height: 1rem;
+  }
+}
+
+.app__footer-name{
+  text-decoration: none;
+  color: var(--pink);
+}
