@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 const Footer = () => {
   return (
     <>
-      <Container className="app__footer app__flexColumn app__normal-text" fluid>
+      <Container className="app__footer app__flexColumn app__normal-text app__container" fluid>
         <p className="app__footer-top">
         © Copyright John Lagoutaris. All Rights Reserved.
         </p>

@@ -1,0 +1,15 @@
+#aside-container{
+  width: 30%;
+  background-color: var(--white2);
+}
+
+.aside-tasks{
+  width: 100%;
+  .aside-header{
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--dark);
+    font-size: 2.5rem;
+  }
+}
+

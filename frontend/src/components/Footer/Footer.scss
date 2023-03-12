@@ -1,6 +1,7 @@
 .app__footer{
-  background-color: black;
-  color: white;
+  border-top: 2px solid var(--dark);
+  background-color: var(--white);
+  color: var(--dark);
   line-height: .8rem;
   width: var(--container-width);
   > .app__footer-top{
@@ -13,5 +14,5 @@
 
 .app__footer-name{
   text-decoration: none;
-  color: var(--pink);
+  color: var(--dark-pink);
 }
