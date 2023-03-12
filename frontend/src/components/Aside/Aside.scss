@@ -1,15 +1,39 @@
 #aside-container{
   width: 30%;
   background-color: var(--white2);
+  min-height: 80vh;
+  justify-content: flex-start;
 }
 
-.aside-tasks{
+.aside-tasks, .aside-projects{
   width: 100%;
-  .aside-header{
-    width: 100%;
-    padding-bottom: 5px;
-    border-bottom: 2px solid var(--dark);
-    font-size: 2.5rem;
+}
+
+.aside-header{
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--dark);
+  font-size: 2.5rem;
+}
+
+.aside-tasks-categories, .aside-projects-categories{
+  list-style-type: none;
+}
+
+.aside-label{
+  width: 100%;
+  padding: 5px;
+  color: var(--dark);
+  font-size: 1.5rem;
+  &:hover{
+    cursor: pointer;
+    background-color: var(--dark-pink);
   }
+}
+
+.aside-button{
+  text-align: left;
+  padding-left: 1rem;
+  background-color: var(--dark-pink);
 }
 

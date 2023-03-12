@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, ButtonGroup, Container, Row } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
+import { images } from '../../constants';
 import './Aside.scss';
 
 const Aside = () => {
@@ -7,14 +8,25 @@ const Aside = () => {
     <Container id="aside-container" className="app__flexColumn app__container">
       <Row className="aside-tasks">
         <h4 className="app__header-text aside-header">Tasks</h4>
-        <ButtonGroup vertical>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-        </ButtonGroup>
+        <ul className="aside-tasks-categories">
+          <li className="aside-label">All T@sks</li>
+          <li className="aside-label">T0day</li>
+          <li className="aside-label">Next 7 Day$</li>
+          <li className="aside-label">!mportant</li>
+        </ul>
+      </Row>
+      <Row className="aside-projects">        
         <h4 className="app__header-text aside-header">Projects</h4>
-        {/* Project Categories */}
+        {/* <ul className="aside-projects-categories">
+          <li className="aside-label">Project</li>
+        </ul> */}
+        <Button className='aside-button aside-label'>
+          Add Project
+        </Button>
+
+      </Row>
+      <Row className='app__flexColumn'>
+
       </Row>
     </Container>
   )
