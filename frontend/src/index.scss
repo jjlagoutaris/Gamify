@@ -46,7 +46,7 @@ body.dark{
     border: 2px solid var(--white);
   }
 
-  .tasks-button{
+  .tasks-button, .aside-button{
     background-color: var(--dark);
     color: var(--white);
     &:hover{
@@ -54,6 +54,10 @@ body.dark{
       background-color: var(--white3);
       color: var(--dark-pink);
     }
+  }
+
+  .aside-button{
+    background-color: var(--dark2);
   }
 
 }

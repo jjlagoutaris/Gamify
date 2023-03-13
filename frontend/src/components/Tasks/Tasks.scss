@@ -2,6 +2,12 @@
   width: 70%;
   justify-content: flex-start;
   min-height: 80vh;
+  img{
+    height: 1.5rem;
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }
 
 .tasks-header{
@@ -22,6 +28,9 @@
 }
 
 .tasks-label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 3px 0;
   padding: .5rem;
   width: 100%;
@@ -40,4 +49,19 @@
     background-color: var(--white3);
     color: var(--dark-pink);
   }
+  img{
+    height: 1.5rem;
+  }
+}
+
+.tasks-task-title{
+  margin: 0;
+  margin-left: .5rem;
+  padding: 0;
+}
+
+.tasks-task-right{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

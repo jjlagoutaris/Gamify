@@ -21,7 +21,9 @@
   padding: 0px;
 }
 
-.aside-label{
+.aside-label-top, .aside-label-bottom{
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 5px;
   font-size: 1.5rem;
@@ -29,16 +31,28 @@
     cursor: pointer;
     background-color: var(--dark-pink);
   }
+  img{
+    height: 1.5rem;
+    margin-right: .5rem;
+  }
+}
+
+.aside-label-bottom{
+  justify-content: space-between;
 }
 
 .aside-button{
   padding: .5rem;
   border-radius: .5rem;
-  background-color: var(--dark-pink);
-  border-color: var(--dark-pink);
+  background-color: var(--white2);
+  border: 2px solid transparent;
   &:hover{
-    background-color: var(--dark);
+    border: 2px solid var(--dark);
+    background-color: var(--white3);
     color: var(--dark-pink);
+  }
+  img{
+    height: 1.5rem;
   }
 }
 

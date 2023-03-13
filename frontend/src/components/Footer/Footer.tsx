@@ -7,10 +7,10 @@ const Footer = () => {
     <>
       <Container className="app__footer app__flexColumn app__normal-text app__container" fluid>
         <p className="app__footer-top">
-        © Copyright John Lagoutaris. All Rights Reserved.
+          Icons from <a href="https://www.flaticon.com/" target="_blank" rel="noreferrer" className='app__footer-name'>flaticon.com</a>
         </p>
         <p className="app__footer-bottom">
-          Website by <a href="https://johnlagoutaris.netlify.app/" target="_blank" rel="noreferrer" className='app__footer-name'>John Lagoutaris</a>
+          Website by <a href="https://johnlagoutaris.netlify.app/" target="_blank" rel="noreferrer" className='app__footer-name'>John Lagoutaris.</a>
         </p>
       </Container>
     </>
