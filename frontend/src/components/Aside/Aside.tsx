@@ -31,6 +31,7 @@ const Aside = () => {
             </div>
           </li>
         </ul>
+        {/* toggles form component when button is clicked by checking if toggleForm and <Form /> are both true */}
         {toggleForm && (<Form/>)}
         <button className='aside-button' onClick={() => setToggleForm(!toggleForm)}>
           <img src={images.add} alt="add" />

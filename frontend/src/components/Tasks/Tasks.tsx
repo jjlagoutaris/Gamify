@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { images } from '../../constants';
 import Form from '../Form/Form';
+import Task from './Task/Task';
 import './Tasks.scss';
 
 const Tasks = () => {
@@ -25,6 +26,7 @@ const Tasks = () => {
             </div>
           </li>
         </ul>
+        {/* toggles form component when button is clicked by checking if toggleForm and <Form /> are both true */}
         {toggleForm && (<Form/>)}
         <button className='tasks-button' onClick={() => setToggleForm(!toggleForm)}>
           <img src={images.add} alt="add task" />
