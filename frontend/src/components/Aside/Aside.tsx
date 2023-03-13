@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row } from 'react-bootstrap';
 import { images } from '../../constants';
+import Form from '../Form/Form';
 import './Aside.scss';
 
 const Aside = () => {
+
+  const [toggleForm, setToggleForm] = useState(false);
+
   return (
     <Container id="aside-container" className="app__flexColumn app__container">
       <Row className="aside-tasks">
@@ -27,7 +31,8 @@ const Aside = () => {
             </div>
           </li>
         </ul>
-        <button className='aside-button'>
+        {toggleForm && (<Form/>)}
+        <button className='aside-button' onClick={() => setToggleForm(!toggleForm)}>
           <img src={images.add} alt="add" />
         </button>
       </Row>
