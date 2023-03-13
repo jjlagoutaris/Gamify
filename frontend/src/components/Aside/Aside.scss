@@ -18,12 +18,12 @@
 
 .aside-tasks-categories, .aside-projects-categories{
   list-style-type: none;
+  padding: 0px;
 }
 
 .aside-label{
   width: 100%;
   padding: 5px;
-  color: var(--dark);
   font-size: 1.5rem;
   &:hover{
     cursor: pointer;
@@ -32,8 +32,13 @@
 }
 
 .aside-button{
-  text-align: left;
-  padding-left: 1rem;
+  padding: .5rem;
+  border-radius: .5rem;
   background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
+  &:hover{
+    background-color: var(--dark);
+    color: var(--dark-pink);
+  }
 }
 

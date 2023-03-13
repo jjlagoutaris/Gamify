@@ -1,3 +1,43 @@
-.tasks-container{
+#tasks-container{
   width: 70%;
+  justify-content: flex-start;
+  min-height: 80vh;
+}
+
+.tasks-header{
+  font-size: 3rem;
+  padding: 2rem;
+  background-color: var(--dark-pink);
+  color: var(--white);
+}
+
+.tasks-row{
+  width: 100%;
+}
+
+.tasks-ul{
+  padding: 0px;
+  list-style-type: none;
+  width: 100%;
+}
+
+.tasks-label{
+  margin: 3px 0;
+  padding: .5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--dark);
+  border: 2px solid var(--dark);
+}
+
+.tasks-button{
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: var(--white);
+  border: 2px solid transparent;
+  &:hover{
+    border: 2px solid var(--dark);
+    background-color: var(--white3);
+    color: var(--dark-pink);
+  }
 }

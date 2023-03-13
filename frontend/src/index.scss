@@ -40,6 +40,22 @@ body.dark{
     background-color: var(--dark);
     color: var(--white);
   }
+
+  .tasks-label{
+    color: var(--white);
+    border: 2px solid var(--white);
+  }
+
+  .tasks-button{
+    background-color: var(--dark);
+    color: var(--white);
+    &:hover{
+      border: 2px solid var(--white3);
+      background-color: var(--white3);
+      color: var(--dark-pink);
+    }
+  }
+
 }
 
 #root{
