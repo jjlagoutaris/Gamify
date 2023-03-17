@@ -1,18 +1,10 @@
 import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
-import TaskModel from './models/task';
+import tasksRoutes from './routes/tasks';
 
 const app = express();
 
-app.get("/", async (req, res, next) => {
-  try {
-    const tasks = await TaskModel.find().exec();
-    res.status(200).json(tasks);
-  } catch (error) {
-    next(error);
-  }
-
-});
+app.use("/api/tasks", tasksRoutes);
 
 // forward to error handler if endpoint is not found
 app.use((req, res, next) => {
