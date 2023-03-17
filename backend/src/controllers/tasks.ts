@@ -9,3 +9,31 @@ export const getTasks: RequestHandler = async (req, res, next) => {
     next(error);
   }
 }
+
+export const getTask: RequestHandler = async(req, res, next) => {
+  const taskId = req.params.taskId;
+  try {
+    const task = await TaskModel.findById(taskId).exec();
+    res.status(200).json(task);
+  } catch (error) {
+    next(error);
+  }
+}
+
+export const createTasks: RequestHandler = async(req, res, next) => {
+  const title = req.body.title;
+  const text = req.body.text;
+  const isCompleted = req.body.isCompleted;
+
+  try {
+    const newTask = await TaskModel.create({
+      title: title,
+      text: text,
+      isCompleted: isCompleted,
+    });
+
+    res.status(201).json(newTask);
+  } catch (error) {
+    next(error);
+  }
+};
