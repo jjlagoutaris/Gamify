@@ -2,6 +2,7 @@ import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
 import tasksRoutes from './routes/tasks';
 import morgan from "morgan";
+import createHttpError, {isHttpError} from "http-errors";
 
 // creates express app
 const app = express();
@@ -14,9 +15,9 @@ app.use(express.json());
 // sets up routing
 app.use("/api/tasks", tasksRoutes);
 
-// forward to error handler if endpoint is not found
+// forward 404 to error handler
 app.use((req, res, next) => {
-  next(Error("Endpoint not found"));
+  next(createHttpError(404, Error("Endpoint not found")));
 });
 
 // error handler middleware
@@ -24,8 +25,13 @@ app.use((req, res, next) => {
 app.use((error: unknown, req: Request, res: Response, next: NextFunction) => {
   console.error(error);
   let errorMessage = "An unknown error occurred";
-  if (error instanceof Error) errorMessage = error.message;
-  res.status(500).json({ error: errorMessage });
+  let statusCode = 500;
+  // checks if error is an HttpError type we defined above; if so, update status code and errorMessage
+  if (isHttpError(error)){
+    statusCode = error.status;
+    errorMessage = error.message;
+  }
+  res.status(statusCode).json({ error: errorMessage });
 });
 
 export default app;
