@@ -7,8 +7,8 @@ body {
   
   --link-color: #61dafb;
   --button-color: #61dafb;
-  --pink: rgb(252, 214, 225);
-  --dark-pink: #FF1493;
+  --pink: #fcd6e1;
+  --dark-pink: #ff1492;
   --white: #FFFAF0;
   --white2: #fefcfe;
   --white3: #FFFAFA;
@@ -42,8 +42,15 @@ body.dark{
   }
 
   .tasks-label{
-    color: var(--white);
-    border: 2px solid var(--white);
+    color: var(--dark);
+    border: 2px solid var(--dark);
+    background-color: var(--button-color);
+    &:hover{
+      cursor: pointer;
+      border: 2px solid var(--white3);
+      background-color: var(--white3);
+      color: var(--dark);
+    }
   }
 
   .tasks-button, .aside-button{
