@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Row } from 'react-bootstrap';
 import { images } from '../../constants';
-import Form from '../Form/Form';
+import ProjectForm from '../ProjectForm/ProjectForm';
 import './Aside.scss';
 
 const Aside = () => {
@@ -32,7 +32,7 @@ const Aside = () => {
           </li>
         </ul>
         {/* toggles form component when button is clicked by checking if toggleForm and <Form /> are both true */}
-        {toggleForm && (<Form/>)}
+        {toggleForm && <ProjectForm />}
         <button className='aside-button' onClick={() => setToggleForm(!toggleForm)}>
           <img src={images.add} alt="add" />
         </button>
