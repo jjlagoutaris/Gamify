@@ -36,12 +36,14 @@ interface CreateTaskBody{
   title?: string,
   text?: string,
   isCompleted: boolean,
+  dueDate?: Date,
 }
 
 export const createTask: RequestHandler<unknown, unknown, CreateTaskBody, unknown> = async(req, res, next) => {
   const title = req.body.title;
   const text = req.body.text;
   const isCompleted = req.body.isCompleted;
+  const dueDate = req.body.dueDate;
 
   try {
     // if user doesn't enter a title
@@ -52,6 +54,7 @@ export const createTask: RequestHandler<unknown, unknown, CreateTaskBody, unknow
       title: title,
       text: text,
       isCompleted: isCompleted,
+      dueDate: dueDate,
     });
 
     res.status(201).json(newTask);
@@ -68,6 +71,7 @@ interface UpdateTaskBody{
   title?: string,
   text?: string,
   isCompleted: boolean,
+  dueDate: Date,
 }
 
 
@@ -76,6 +80,7 @@ export const updateTask: RequestHandler<UpdateTaskParams, unknown, UpdateTaskBod
   const newTitle = req.body.title;
   const newText = req.body.text;
   const newIsCompleted = req.body.isCompleted;
+  const newDueDate = req.body.dueDate;
   try {
     if(!mongoose.isValidObjectId(taskId)){
       throw createHttpError(400, "Invalid task id");
@@ -95,6 +100,7 @@ export const updateTask: RequestHandler<UpdateTaskParams, unknown, UpdateTaskBod
     task.title = newTitle;
     task.text = newText;
     task.isCompleted = newIsCompleted;
+    task.dueDate = newDueDate;
 
     const updatedTask = await task.save();
 
