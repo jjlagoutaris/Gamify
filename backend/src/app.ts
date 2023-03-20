@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
 import tasksRoutes from './routes/tasks';
+import projectsRoutes from './routes/projects';
 import morgan from "morgan";
 import createHttpError, {isHttpError} from "http-errors";
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // sets up routing
 app.use("/api/tasks", tasksRoutes);
+app.use("/api/projects", projectsRoutes);
 
 // forward 404 to error handler
 app.use((req, res, next) => {
