@@ -36,7 +36,7 @@ interface CreateTaskBody{
   title?: string,
   text?: string,
   isCompleted: boolean,
-  dueDate?: Date,
+  dueDate?: string,
 }
 
 export const createTask: RequestHandler<unknown, unknown, CreateTaskBody, unknown> = async(req, res, next) => {
@@ -71,7 +71,7 @@ interface UpdateTaskBody{
   title?: string,
   text?: string,
   isCompleted: boolean,
-  dueDate: Date,
+  dueDate: string,
 }
 
 

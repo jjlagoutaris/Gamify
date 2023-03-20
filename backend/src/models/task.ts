@@ -5,7 +5,7 @@ const taskSchema = new Schema({
   title: { type: String, required: true },
   text: { type: String },
   isCompleted: { type: Boolean, default: false },
-  dueDate: {type: Date, default: Date.now},
+  dueDate: {type: String, default: "2023-03-20T17:47"},
   // experience value of task for Gamify
   // xpValue: {
   //   type: Number,
