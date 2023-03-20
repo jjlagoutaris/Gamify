@@ -28,7 +28,7 @@ const Tasks = () => {
     <li key={task._id} className="tasks-label">
       <div className="tasks-task-left app__flexCenter">
         <img
-          src={task.isCompleted ? images.checkboxFilled : images.unchecked}
+          src={task.isCompleted ? images.checked : images.unchecked}
           alt="checkbox"
           className="tasks-task-completion"
         />

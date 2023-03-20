@@ -4,8 +4,10 @@
   min-height: 80vh;
   img{
     height: 1.5rem;
+    transition: all .5s ease-in-out;
     &:hover{
       cursor: pointer;
+      height: 1.9rem;
     }
   }
 
@@ -41,6 +43,11 @@
   font-size: 1.5rem;
   color: var(--dark);
   border: 2px solid var(--dark);
+  transition: all .3s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    background-color: var(--button-color);
+  }
 }
 
 .tasks-button{

@@ -11,7 +11,8 @@ import star from '../assets/star.png';
 import today from '../assets/today.png';
 import week from '../assets/week.png';
 import unchecked from '../assets/unchecked.png';
-import checkboxFilled from '../assets/checkbox_filled.png';
+import checked from '../assets/checked.png';
+import trash from '../assets/trash.png';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default{
@@ -27,6 +28,7 @@ export default{
   star,
   today,
   week,
-  checkboxFilled,
+  checked,
   unchecked,
+  trash,
 }
