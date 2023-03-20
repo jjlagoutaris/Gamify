@@ -3,6 +3,7 @@ export interface Task{
   title: string,
   text?: string,
   isCompleted: boolean,
+  dueDate: string,
   createdAt: string,
   updatedAt: string,
 }
