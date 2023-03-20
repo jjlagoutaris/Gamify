@@ -2,12 +2,15 @@ import React from 'react'
 import { images } from '../../constants'
 import { Task as TaskModel } from '../../models/task'
 import { formatDate } from '../../utilities/formatDate'
+import { MdDelete } from "react-icons/md";
 
 interface TaskProps{
   task: TaskModel,
+  onTaskClicked: (task: TaskModel) => void,
+  onDeleteTaskClicked: (task: TaskModel) => void,
 }
 
-const Task = ({ task }: TaskProps) => {
+const Task = ({ task, onDeleteTaskClicked, onTaskClicked }: TaskProps) => {
 
   return (
     <li className="tasks-label">
@@ -20,7 +23,7 @@ const Task = ({ task }: TaskProps) => {
       <p className="tasks-task-title">{task.title}</p>
     </div>
     <div className="tasks-task-right app__flexCenter">
-      <div className="tasks-task-due-date">Due: {formatDate(task.dueDate)}</div>
+      <div className="tasks-task-due-date">Due: {formatDate(String(task.dueDate))}</div>
       <img
         src={images.star}
         alt="important task button"
@@ -30,7 +33,12 @@ const Task = ({ task }: TaskProps) => {
         src={images.edit}
         alt="edit task button"
         className="tasks-task-edit"
+        onClick={() => onTaskClicked(task)}
       />
+      <MdDelete onClick={(e) => {
+        onDeleteTaskClicked(task);
+        e.stopPropagation();
+      }} />
     </div>
   </li>
   )
