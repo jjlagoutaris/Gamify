@@ -13,7 +13,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
 }
 
 export async function fetchTasks(): Promise<Task[]> {
-  const response = await fetchData("/api/tasks", { method: "GET" });
+  const response = await fetchData("/api/tasks/", { method: "GET" });
   return response.json();
 }
 
