@@ -14,7 +14,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // sets up routing
-app.use("/api/tasks", tasksRoutes);
+app.use("/api/tasks/", tasksRoutes);
 app.use("/api/projects", projectsRoutes);
 
 // forward 404 to error handler
